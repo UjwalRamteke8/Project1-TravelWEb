@@ -1,0 +1,445 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+/* progress bar */
+@if $enable-transitions {
+    @keyframes progress-bar-stripes {
+      0% { background-position-x: $progress-height; }
+    }
+  }
+header {
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    padding: 20px;
+    background-color: navy;
+    color: white;
+    height: 10rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Yatri {
+    font-size: 2.5rem;
+    animation: slideIn 1s ease-in-out forwards;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    cursor: pointer;
+}
+/* // icons */
+.icons-all {
+    display: inline-block;
+    margin: 0 15px;
+    transform: scale(1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icons-all:hover {
+    transform: scale(1) rotate(-8deg);
+    color: #007bff; /* Optional: Change color on hover */
+    cursor: pointer;
+}
+
+/* Wallpaper Section */
+.wallpaper {
+    position: relative;
+}
+
+.wallpaper img {
+    width: 100%;
+    height: auto;
+}
+
+#title1, #title2 {
+    position: absolute;
+    left: 2rem;
+    font-size: 3rem;
+    color: white;
+    z-index: 2;
+}
+
+#title1 {
+    top: 40%;
+}
+
+#title2 {
+    top: 50%;
+}
+/* css for section tag */
+/* Section Styling */
+#destinations {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #3a6186, #89253e);
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 40px auto;
+    max-width: 1270px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to slightly scale the section */
+#destinations:hover {
+    transform: scale(1.05);
+}
+
+/* Title Styling */
+#destinations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Title underline effect */
+#destinations h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #ff5e57;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* Destination Card Styling */
+.destinations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.destination-card {
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 280px;
+    height: 380px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Scale and shadow effect on hover */
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #ff5e57;
+}
+
+/* Destination Title Styling */
+.destination-card h3 {
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #89253e;
+}
+
+
+/* Keyframes for animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #title1, #title2 {
+        font-size: 2rem;
+        left: 1rem;
+    }
+    .Yatri {
+        font-size: 2rem;
+    }
+}
+/* Carousel Item */
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%; /* Ensure full width for the carousel item */
+    margin: 0 10px;
+}
+
+/* Card Image */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card Styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+/* Carousel Control Icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    content: '';
+    background-color: white; /* Adjust color as needed */
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* // footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-brand img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin-right: 40px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fca311;
+}
+
+.footer-section form {
+    display: flex;
+}
+
+.footer-section input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.footer-section button {
+    padding: 10px 20px;
+    background-color: #fca311;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section button:hover {
+    background-color: #e58e26;
+}
+
+.footer-social-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.social-links a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fca311;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer-legal {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-legal a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: #fca311;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-legal {
+        text-align: center;
+    }
+}
+/* // explore india */
+.explore-india .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.explore-india .card:hover {
+    transform: scale(1.05);
+}
+
+.explore-india .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info p:hover{
+    color: #fca311;
+}
+.contact-info-img {
+    display: flex;
+}
+#ujwal-img:hover{
+    transform: scale(1);
+}
