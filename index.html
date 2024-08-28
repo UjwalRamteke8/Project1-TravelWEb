@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatri - Explore the World</title>
+    <link rel="stylesheet" href="project.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<!-- progress bar -->
+    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 5px;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%" ></div>
+      </div>    
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <h1 class="Yatri" href="majorMinor.html" >Yatri.com - Explore The World</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="icons">
+                    <ul>
+                        <li class="icons-all" id="stay" >stay <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16" >
+                            <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+                          </svg> </li>
+                        <li class="icons-all" id="Flights" >Flights <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16" >
+                            <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"/>
+                          </svg></li>
+                        <li class="icons-all" id="Trains" >Trains <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-train-front" viewBox="0 0 16 16" >
+                            <path d="M5.621 1.485c1.815-.454 2.943-.454 4.758 0 .784.196 1.743.673 2.527 1.119.688.39 1.094 1.148 1.094 1.979V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V4.583c0-.831.406-1.588 1.094-1.98.784-.445 1.744-.922 2.527-1.118m5-.97C8.647.02 7.353.02 5.38.515c-.924.23-1.982.766-2.78 1.22C1.566 2.322 1 3.432 1 4.582V13.5A2.5 2.5 0 0 0 3.5 16h9a2.5 2.5 0 0 0 2.5-2.5V4.583c0-1.15-.565-2.26-1.6-2.849-.797-.453-1.855-.988-2.779-1.22ZM5 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0m0 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0m7 1a1 1 0 1 0-1-1 1 1 0 1 0-2 0 1 1 0 0 0 2 0 1 1 0 0 0 1 1M4.5 5a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h3V5zm4 0v3h3a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5zM3 5.5A1.5 1.5 0 0 1 4.5 4h7A1.5 1.5 0 0 1 13 5.5v2A1.5 1.5 0 0 1 11.5 9h-7A1.5 1.5 0 0 1 3 7.5zM6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+                          </svg></li>
+
+                        <li class="icons-all" id="Buses" >Buses<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bus-front-fill" viewBox="0 0 16 16" >
+                            <path d="M16 7a1 1 0 0 1-1 1v3.5c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.5 2.5 0 0 1-1-2V8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1V2.64C1 1.452 1.845.408 3.064.268A44 44 0 0 1 8 0c2.1 0 3.792.136 4.936.268C14.155.408 15 1.452 15 2.64V4a1 1 0 0 1 1 1zM3.552 3.22A43 43 0 0 1 8 3c1.837 0 3.353.107 4.448.22a.5.5 0 0 0 .104-.994A44 44 0 0 0 8 2c-1.876 0-3.426.109-4.552.226a.5.5 0 1 0 .104.994M8 4c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m-3 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0m8 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m-7 0a1 1 0 0 0 1 1h2a1 1 0 1 0 0-2H7a1 1 0 0 0-1 1"/>
+                          </svg></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="majorMinor.html" style="color: white;">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.google.com/search?client=firefox-b-d&q=travel+destinations" style="color: white;">Destinations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about" style="color: white;">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" style="color: white;">Contact</a></li>
+                    </ul>
+                    <div class="d-flex ms-3">
+                        <button type="button" class="btn btn-outline-primary me-2" id="Register" >Register</button>
+                        <button type="button" class="btn btn-outline-primary" id="Sign-in">Sign-in</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid p-0">
+        <div class="wallpaper">
+            <img class="img-fluid w-100" src="https://r-xx.bstatic.com/xdata/images/xphoto/720x217/363658458.jpeg?k=427a5cc2522eb3d80a76d232939725ec6cf76e03ef26ee846375709b3e9caf6f&o= 720w, https://r-xx.bstatic.com/xdata/images/xphoto/1440x434/363658458.jpeg?k=427a5cc2522eb3d80a76d232939725ec6cf76e03ef26ee846375709b3e9caf6f&o= 1440w, https://q-xx.bstatic.com/xdata/images/xphoto/2880x868/363658458.jpeg?k=427a5cc2522eb3d80a76d232939725ec6cf76e03ef26ee846375709b3e9caf6f&o= 2880w" alt="Wallpaper">
+
+            <h1 id="title1">A Place to call Home</h1>
+            <h1 id="title2">on your next adventure</h1>
+           
+        </div>
+    </div>
+
+    <section id="destinations" class="destinations-section">
+        <h2>Popular Destinations</h2>
+        <div class="destinations-container">
+            <div class="destination-card">
+                <h3>Kyoto, Japan</h3>
+                <img id="Japan" src="https://images.unsplash.com/photo-1508504509543-5ca56440e013?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8amFwYW58ZW58MHx8MHx8fDA%3D" href="https://www.google.com/search?client=firefox-b-d&sca_esv=996eebb2cded8125&sca_upv=1&sxsrf=ADLYWIIwpun__rSB5byN2hfcMDIhIHAD6w:1724488953361&q=Kyoto&si=ACC90nyvvWro6QmnyY1IfSdgk5wwjB1r8BGd_IWRjXqmKPQqm20pSowjEQWmmJ8kHltpNwineBhDlNihPWfsjsFnE2TFaTK-sQ%3D%3D&sa=X&ved=2ahUKEwiDwe_7nY2IAxW4XWwGHYnCC7gQs4ILegQINBAD&biw=1696&bih=807&dpr=1.13" style="height: 370px;width: 270px;">
+                
+            </body>
+               
+            </div>
+            <div class="destination-card">
+                <h3>France</h3>
+                <img id="France" src="https://media.istockphoto.com/id/1779531193/video/time-lapse-of-crowded-street-traffic-on-champs-elysees-road-of-arc-de-triomphe-de-l%C3%A9toile-is.jpg?s=640x640&k=20&c=4FjRkJJS6LTc_VMa8PYmQxqf9TP3HJPPEhvU1DQftlw=" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>Indonesia</h3>
+                <img id="Indonesia" src="https://media.istockphoto.com/id/653953140/photo/hindu-temple-in-bali.jpg?s=612x612&w=0&k=20&c=ysj3S2kV1ZgCr4QZWDzjvHRowCI3-cR1xQNnqE8-BS4=" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>USA</h3>
+                <img id="USA" src="https://media.istockphoto.com/id/1139477413/photo/flags-of-india-and-the-usa.jpg?s=612x612&w=0&k=20&c=bmnYaKxAJ07B7s3G13OVXyLfP13bWanYIzg5oDnYrro=" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>India</h3>
+                <img id="India" src="https://images.unsplash.com/photo-1532664189809-02133fee698d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGluZGlhfGVufDB8fDB8fHww" alt="" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>Brazil</h3>
+                <img id="Brazil" src="https://images.unsplash.com/photo-1551620832-e2af54f6f0b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnJhemlsfGVufDB8fDB8fHww" alt="" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>Australia</h3>
+                <img id="Australia" src="https://plus.unsplash.com/premium_photo-1666777247293-4c76e99731ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXVzdHJhbGlhfGVufDB8fDB8fHww" alt="" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>Nepal</h3>
+                <img id="Nepal" src="https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmVwYWx8ZW58MHx8MHx8fDA%3D" alt="" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>Russia</h3>
+                <img id="Russia" src="https://images.unsplash.com/photo-1554844344-c34ea04258c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cnVzc2lhfGVufDB8fDB8fHww" alt="" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>New Zealand</h3>
+                <img id="New Zealand" src="https://images.unsplash.com/photo-1504280317859-9c6cce36bca8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D" alt="" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>Spain</h3>
+                <img id="Spain" src="https://images.unsplash.com/photo-1558642084-fd07fae5282e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3BhaW58ZW58MHx8MHx8fDA%3D" alt="" style="height: 370px;width: 270px;">
+                
+            </div>
+            <div class="destination-card">
+                <h3>Greece</h3>
+                <img id="Greece" src="https://images.unsplash.com/photo-1497262693247-aa258f96c4f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZWNlfGVufDB8fDB8fHww" alt="" style="height: 370px;width: 270px;">
+                
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- // cards -->
+    <div class="card-carousel">
+        <button class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <ul class="carousel-list">
+            <li class="carousel-item">
+                <div class="card">
+                    <img src="image1.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 1</h5>
+                        <p class="card-text">Some quick example text to build on the card title.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel-item">
+                <div class="card">
+                    <img src="image2.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 2</h5>
+                        <p class="card-text">Some quick example text to build on the card title.</p>
+                    </div>
+                </div>
+            </li>
+            <!-- Add more li.carousel-item as needed -->
+        </ul>
+        <button class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <div class="container explore-india my-5">
+        <h2 class="text-center mb-4">Explore India</h2>
+        <div id="exploreIndiaCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" >
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/id/82639116/photo/adalaj-step-well-center.webp?b=1&s=612x612&w=0&k=20&c=Rlc4P0DxCNafqbKhEX4MgppCtLGX4WeVWBP0OUSfR6Q=" class="card-img-top" alt="Ahmdabad">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ahmdabad</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://images.unsplash.com/photo-1625309242986-aec6b5fd1cca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHN1cmF0JTIwY2l0eXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Surat">
+                                <div class="card-body">
+                                    <h5 class="card-title">Surat</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://plus.unsplash.com/premium_photo-1697730489433-4a5fe8a77f96?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF2aSUyMG11bWJhaXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Navi Mumbai">
+                                <div class="card-body">
+                                    <h5 class="card-title">Navi Mumbai</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://plus.unsplash.com/premium_photo-1661919589683-f11880119fb7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaGl8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Mumbai">
+                                <div class="card-body">
+                                    <h5 class="card-title">Delhi</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/id/1329340845/photo/chattedi-a-famous-tourist-place-from-kutch-bhuj-gujarat-india.webp?b=1&s=612x612&w=0&k=20&c=Frir7-jgCJs5K8vJUhu_lVasj3WNoEyIfx8K9Jr9XCU=" class="card-img-top" alt="Bhuj">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bhuj</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/id/1145901503/photo/kullu-himachal-pradesh-india-sunset-at-manu-rishi-temple-in-himachal.webp?b=1&s=612x612&w=0&k=20&c=yCqIDOYdBqmTndGJVlfYZ537lV2QNDM1yz6VqoXe9Mw=" class="card-img-top" alt="Dwarka">
+                                <div class="card-body">
+                                    <h5 class="card-title">Manali</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://plus.unsplash.com/premium_photo-1661919589683-f11880119fb7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaGl8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Mumbai">
+                                <div class="card-body">
+                                    <h5 class="card-title">Delhi</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/id/1329340845/photo/chattedi-a-famous-tourist-place-from-kutch-bhuj-gujarat-india.webp?b=1&s=612x612&w=0&k=20&c=Frir7-jgCJs5K8vJUhu_lVasj3WNoEyIfx8K9Jr9XCU=" class="card-img-top" alt="Bhuj">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bhuj</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/id/1145901503/photo/kullu-himachal-pradesh-india-sunset-at-manu-rishi-temple-in-himachal.webp?b=1&s=612x612&w=0&k=20&c=yCqIDOYdBqmTndGJVlfYZ537lV2QNDM1yz6VqoXe9Mw=" class="card-img-top" alt="Dwarka">
+                                <div class="card-body">
+                                    <h5 class="card-title">Manali</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://plus.unsplash.com/premium_photo-1661919589683-f11880119fb7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaGl8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Mumbai">
+                                <div class="card-body">
+                                    <h5 class="card-title">Delhi</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/id/1329340845/photo/chattedi-a-famous-tourist-place-from-kutch-bhuj-gujarat-india.webp?b=1&s=612x612&w=0&k=20&c=Frir7-jgCJs5K8vJUhu_lVasj3WNoEyIfx8K9Jr9XCU=" class="card-img-top" alt="Bhuj">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bhuj</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://media.istockphoto.com/id/1145901503/photo/kullu-himachal-pradesh-india-sunset-at-manu-rishi-temple-in-himachal.webp?b=1&s=612x612&w=0&k=20&c=yCqIDOYdBqmTndGJVlfYZ537lV2QNDM1yz6VqoXe9Mw=" class="card-img-top" alt="Dwarka">
+                                <div class="card-body">
+                                    <h5 class="card-title">Manali</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel items for additional slides as needed -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#exploreIndiaCarousel" data-bs-slide="prev" style="margin-top: 7rem; margin-left: -30rem;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#exploreIndiaCarousel" data-bs-slide="next" style="margin-right: -30rem; margin-top: 7rem;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="your-logo.png" alt="Yatri Logo">
+                <p>Your perfect travel companion.</p>
+            </div>
+    
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="majorMinor.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Travel Packages</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-section">
+                    <h4>Travel Services</h4>
+                    <ul>
+                        <li><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwib98KZ4I2IAxX1xkwCHZlXOV0YABAAGgJ0bQ&co=1&gclid=CjwKCAjwiaa2BhAiEiwAQBgyHv_WqKHddcDeZ9cJt0r2czWPv_-FluPxy7Ua2RsV3bd0l7428qRDpRoCSKUQAvD_BwE&ohost=www.google.com&cid=CAESVeD2E8dC044ciPYpxs-VcCG_j4ySETaTNhKfG4VFDpazLSwoV8aOkXD8HZPsThOjaMmk-xHwtfOCWLu0yBnAW7kGIy2joNpOkynV3YF-UneKV0V19CM&sig=AOD64_2VGOGdlNBd1ubbzpyBkjcrSDnePQ&q&adurl&ved=2ahUKEwiT7ryZ4I2IAxUbnq8BHc0QAT4Q0Qx6BAgIEAE">Flight Booking</a></li>
+
+                        <li><a href="https://www.booking.com/index.en-gb.html?aid=2311236;label=en-in-booking-desktop-SoQWfYhAMBURf0HSQntj1AS652796016141:pl:ta:p1:p2:ac:ap:neg:fi:tikwd-334108349:lp9146362:li:dec:dm;ws=&gclid=Cj0KCQjwiOy1BhDCARIsADGvQnDyQvrGFCr3usuFxFaEVA6AyKJzWNyFXgSIWKV6NB0mKw16CtWJ-JYaAg4NEALw_wcB">Hotel Booking</a></li>
+
+                        <li><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi0oMO04I2IAxWVbQ8CHePFA6AYABACGgJ0Yg&co=1&gclid=CjwKCAjwiaa2BhAiEiwAQBgyHrHVB3bGlKM-vbmAeA2PWgQ3fdeVu7TCiF4sLv-du5uUN08Uj47IUBoCqpEQAvD_BwE&ohost=www.google.com&cid=CAESVeD2kYyjCSnPHHb-3Y_EsYvM0N_CU_LcAhclsLSiiwswBFvhJUUm4k4AIHVoR-rB8dBRcvOBEImvux3yvJ65DeLFP1ENLhRYtVKx0FFZW53ArwNR49I&sig=AOD64_2SRNz_QVW5eUbdEoep6ORtOTT78Q&q&adurl&ved=2ahUKEwjvpLy04I2IAxXEj68BHeqIG4AQ0Qx6BAgWEAM">Car Rentals</a></li>
+                        <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Tour_guide&ved=2ahUKEwie46i_4I2IAxVDm68BHRMBBG0QFnoECB0QAQ&usg=AOvVaw0y1q6G3xw_3CoGEgul8FrQ">Tour Guides</a></li>
+                        <li><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjshMTJ4I2IAxU32kwCHYy8EBAYABAGGgJ0bQ&co=1&gclid=CjwKCAjwiaa2BhAiEiwAQBgyHoNWI7Lj-uNVe3BW9yeGrq9cHQx3_QXMO36maxv9uWsOVDZZ3Y7WwxoCatoQAvD_BwE&ohost=www.google.com&cid=CAESVeD2vgGJTe5tVjZlrjViau62hX6DL6MJ_FssMB3lGpgLIeF75ZSGAUjt8nAyUvLNkrtz6IuU5Vy9eEOllAPkA6xIO8eoMcSArUCgkcU2g6C1EuEsBM4&sig=AOD64_34OWNb7fq0xqDF7AQnvXwqa_Upxg&q&adurl&ved=2ahUKEwiazr7J4I2IAxXfUPUHHU5NCkUQ0Qx6BAgMEAE">Travel Insurance</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-section">
+                    <h4> Signup</h4>
+                    <form action="#" method="post">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="footer-social-contact">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+    
+                <div class="contact-info">
+                    
+                    <p><i class="fas fa-map-marker-alt"></i> <h3> Website Created By :</h3></p>
+                    <p><b>Ujwal Ramteke</b></p>
+                    <p><i class="fas fa-phone"></i> +91 9923067027</p>
+                    <p><i class="fas fa-envelope"></i> ujwalramteke293@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="col-md-3" style="margin-left: 84rem;/*! margin-bottom: 5rem; */margin-top: -13rem;">
+                <div class="card">
+                    <img src="ujwal_ramteke_8-20231216-0001.jpg" class="card-img-top" alt="Destination 3">
+                 
+                </div>
+            </div>
+
+    
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="project.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
